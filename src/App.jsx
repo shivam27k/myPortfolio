@@ -20,11 +20,11 @@ const App = () => {
 					path: '/myPortfolio',
 					element: <Home />,
 				},
+				{
+					path: '/myPortfolio/*',
+					element: <NotFound />,
+				},
 			],
-		},
-		{
-			path: '/myPortfolio/*',
-			element: <NotFound />,
 		},
 	])
 
