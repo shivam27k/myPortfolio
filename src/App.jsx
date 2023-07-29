@@ -17,13 +17,13 @@ const App = () => {
 			element: <Layout />,
 			children: [
 				{
-					path: '/',
+					path: '/myPortfolio',
 					element: <Home />,
 				},
 			],
 		},
 		{
-			path: '/*',
+			path: '/myPortfolio/*',
 			element: <NotFound />,
 		},
 	])
