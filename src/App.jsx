@@ -21,7 +21,7 @@ const App = () => {
 					element: <Home />,
 				},
 				{
-					path: '/myPortfolio/*',
+					path: '/myPortfolio/notFound',
 					element: <NotFound />,
 				},
 			],
