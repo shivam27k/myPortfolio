@@ -17,14 +17,14 @@ const App = () => {
 			element: <Layout />,
 			children: [
 				{
-					path: '/myPortfolio',
+					path: '/myPortfolio/',
 					element: <Home />,
 				},
-				{
-					path: '/myPortfolio/notFound',
-					element: <NotFound />,
-				},
 			],
+		},
+		{
+			path: '/*',
+			element: <NotFound />,
 		},
 	])
 
