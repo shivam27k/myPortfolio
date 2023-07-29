@@ -14,6 +14,7 @@ body {
 .site-wrap {
   overflow: hidden;
   max-height: 100vh;
+
   transition: transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
 }
 
@@ -24,6 +25,7 @@ body {
 .panel-wrap {
   height: 100vh;
   width: 100vw;
+
 }
 
 h1 {
@@ -254,4 +256,18 @@ h1 {
 
 .animate--tilt2 {
   transform: scale(0.8) rotateX(25deg);
+}
+
+@media (max-width: 800px) {
+  .panel {
+    height: 91vh;
+  }
+
+  .panel-wrap {
+    height: 91vh;
+  }
+
+  .site-wrap {
+    max-height: 91vh;
+  }
 }
