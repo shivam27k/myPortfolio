@@ -1,7 +1,8 @@
 {
   "name": "myportfolio",
-  "private": true,
+  "homepage": "https://shivam27k.github.io/myPortfolio/",
   "version": "0.0.0",
+  "private": false,
   "type": "module",
   "scripts": {
     "dev": "vite",
