@@ -26,7 +26,11 @@ body {
 
 }
 
-h1 {
+.introScreen {
+  margin: 0;
+}
+
+.h1 {
   font-size: 20vmin;
   margin: 0;
 }
@@ -85,6 +89,17 @@ h1 {
 }
 
 .panel h1 {
+  cursor: default;
+  left: 50%;
+  line-height: 1;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  user-select: none;
+}
+
+.panel .introScreen {
   cursor: default;
   left: 50%;
   line-height: 1;

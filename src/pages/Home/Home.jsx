@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { useState } from 'react'
 import './Home.css'
+import Introduction from '../../components/Intro/Introduction'
 
 const Home = () => {
 	const [posX, setPosX] = useState(0)
@@ -102,13 +103,15 @@ const Home = () => {
 					>
 						down
 					</span>
-					<span
+					{/* <span
 						className="panel__zoom js-zoom"
 						onClick={handleZoomOut}
 					>
 						View All
-					</span>
-					<h1>Main</h1>
+					</span> */}
+					<div className="introScreen">
+						<Introduction />
+					</div>
 					{/* <div className="panel__animation-list">
 						<span
 							className={`js-animation${
@@ -185,7 +188,7 @@ const Home = () => {
 					>
 						down
 					</span>
-					<h1>Up</h1>
+					<h1 className="h1">Up</h1>
 				</div>
 
 				<div
@@ -212,7 +215,7 @@ const Home = () => {
 					>
 						down
 					</span>
-					<h1>Up Left</h1>
+					<h1 className="h1">Up Left</h1>
 				</div>
 
 				<div
@@ -239,7 +242,7 @@ const Home = () => {
 					>
 						down
 					</span>
-					<h1>Up Right</h1>
+					<h1 className="h1">Up Right</h1>
 				</div>
 
 				<div
@@ -278,7 +281,7 @@ const Home = () => {
 					>
 						down
 					</span>
-					<h1>Left</h1>
+					<h1 className="h1">Left</h1>
 				</div>
 
 				<div
@@ -317,7 +320,7 @@ const Home = () => {
 					>
 						down
 					</span>
-					<h1>Right</h1>
+					<h1 className="h1">Right</h1>
 				</div>
 
 				<div
@@ -356,7 +359,7 @@ const Home = () => {
 					>
 						right
 					</span>
-					<h1>Down</h1>
+					<h1 className="h1">Down</h1>
 				</div>
 
 				<div
@@ -384,7 +387,7 @@ const Home = () => {
 						left
 					</span>
 
-					<h1>Down Rt</h1>
+					<h1 className="h1">Down Rt</h1>
 				</div>
 
 				<div
@@ -411,7 +414,7 @@ const Home = () => {
 					>
 						right
 					</span>
-					<h1>Down Left</h1>
+					<h1 className="h1">Down Left</h1>
 				</div>
 			</div>
 		</div>
