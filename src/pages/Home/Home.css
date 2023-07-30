@@ -1,6 +1,5 @@
 body {
-  background-color: #282a2d;
-  background-image: url("https://i.imgsafe.org/6c147abfa3.jpg");
+  background-color: hsl(260deg 100% 3%);
   background-repeat: repeat;
   color: white;
   font-family: "Oswald", sans-serif;
@@ -14,7 +13,6 @@ body {
 .site-wrap {
   overflow: hidden;
   max-height: 100vh;
-
   transition: transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
 }
 
@@ -258,16 +256,16 @@ h1 {
   transform: scale(0.8) rotateX(25deg);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 700px) {
   .panel {
-    height: 91vh;
+    height: 89vh;
   }
 
   .panel-wrap {
-    height: 91vh;
+    height: 89vh;
   }
 
   .site-wrap {
-    max-height: 91vh;
+    max-height: 89vh;
   }
 }

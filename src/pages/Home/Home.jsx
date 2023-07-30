@@ -23,7 +23,8 @@ const Home = () => {
 		setPosX(0)
 		setPosY(0)
 		setIsZoomed(true)
-		setSelectedPanel(null) // Reset selected panel when zooming out
+		setSelectedPanel(null)
+		document.querySelector('.site-wrap').style.overflow = 'visible'
 	}
 
 	const handleSelectPanel = (x, y) => {
@@ -31,6 +32,7 @@ const Home = () => {
 			setPosX(x)
 			setPosY(y)
 			setIsZoomed(false)
+			document.querySelector('.site-wrap').style.overflow = 'hidden'
 		} else {
 			setSelectedPanel({ x, y })
 		}
@@ -107,7 +109,7 @@ const Home = () => {
 						View All
 					</span>
 					<h1>Main</h1>
-					<div className="panel__animation-list">
+					{/* <div className="panel__animation-list">
 						<span
 							className={`js-animation${
 								activeAnimation === null ? ' active' : ''
@@ -144,7 +146,7 @@ const Home = () => {
 						>
 							Tilt-2
 						</span>
-					</div>
+					</div> */}
 				</div>
 
 				<div
