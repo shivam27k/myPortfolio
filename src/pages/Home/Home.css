@@ -27,7 +27,7 @@ body {
 }
 
 .introScreen {
-  margin: 0;
+  margin: auto;
 }
 
 .h1 {
@@ -88,7 +88,7 @@ body {
   transform: scale(0.8) rotateX(25deg);
 }
 
-.panel h1 {
+.panel .h1 {
   cursor: default;
   left: 50%;
   line-height: 1;
@@ -107,7 +107,7 @@ body {
   text-align: center;
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
-  user-select: none;
+  /* user-select: none; */
 }
 
 .panel[data-x-pos="-2"] {

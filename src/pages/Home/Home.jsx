@@ -9,6 +9,7 @@ const Home = () => {
 	const [activeAnimation, setActiveAnimation] = useState(null)
 	const [isZoomed, setIsZoomed] = useState(false)
 	const [selectedPanel, setSelectedPanel] = useState(null)
+	const [bird, setBird] = useState(false)
 
 	const handleMove = (x, y) => {
 		setPosX((prevX) => prevX + x)
@@ -20,11 +21,13 @@ const Home = () => {
 	}
 
 	const handleZoomOut = (e) => {
+		console.log('not bird')
 		e.stopPropagation()
 		setPosX(0)
 		setPosY(0)
 		setIsZoomed(true)
 		setSelectedPanel(null)
+		setBird(true)
 		document.querySelector('.site-wrap').style.overflow = 'visible'
 	}
 
@@ -33,6 +36,7 @@ const Home = () => {
 			setPosX(x)
 			setPosY(y)
 			setIsZoomed(false)
+			setBird(false)
 			document.querySelector('.site-wrap').style.overflow = 'hidden'
 		} else {
 			setSelectedPanel({ x, y })
@@ -77,13 +81,13 @@ const Home = () => {
 						className="panel__nav panel__nav--left js-left"
 						onClick={() => handleMove(1, 0)}
 					>
-						left
+						Skills
 					</span>
 					<span
 						className="panel__nav panel__nav--right js-right"
 						onClick={() => handleMove(-1, 0)}
 					>
-						right
+						Projects
 					</span>
 					<span
 						className="panel__nav panel__nav--right-down js-down js-right"
@@ -101,7 +105,7 @@ const Home = () => {
 						className="panel__nav panel__nav--down js-down"
 						onClick={() => handleMove(0, -1)}
 					>
-						down
+						Contact Me
 					</span>
 					{/* <span
 						className="panel__zoom js-zoom"
@@ -110,7 +114,10 @@ const Home = () => {
 						View All
 					</span> */}
 					<div className="introScreen">
-						<Introduction />
+						<Introduction
+							onViewAll={handleZoomOut}
+							birdFly={bird}
+						/>
 					</div>
 					{/* <div className="panel__animation-list">
 						<span
